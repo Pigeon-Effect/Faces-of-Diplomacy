@@ -118,5 +118,5 @@ def process_politician_folders(root_dir, target_count=100):
 
 
 # Configuration
-root_directory = r"C:\Users\Admin\Documents\Cultural Analytics\resources\wikimedia\filtered_and_cropped_backup"
+root_directory = "path_to_china_daily_dataset"
 process_politician_folders(root_directory)
