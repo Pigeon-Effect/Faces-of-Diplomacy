@@ -5,7 +5,6 @@ import plotly.express as px
 
 
 def count_images(path):
-    """Count image files in a directory and its subdirectories."""
     count = 0
     for root, dirs, files in os.walk(path, followlinks=False):
         count += len([f for f in files if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif', '.tiff'))])
@@ -13,12 +12,6 @@ def count_images(path):
 
 
 def analyze_folder_structure(base_path, continent_mapping_path):
-    """Analyze the folder structure and count images by continent, country and politician."""
-    print("Verifying paths...")
-    print(f"Base path exists: {os.path.exists(base_path)}")
-    print(f"Mapping exists: {os.path.exists(continent_mapping_path)}")
-
-    print("\nLoading continent mapping...")
     with open(continent_mapping_path, 'r') as f:
         country_to_continent = json.load(f)
 
@@ -85,14 +78,9 @@ if __name__ == "__main__":
                      color='continent',
                      color_discrete_sequence=custom_colors)
 
-    # Adjust layout
-    fig.update_layout(
-        height=900,  # Adjust height to make it upright
-        width=700  # Keep width narrower than height
-    )
 
     output_path = os.path.abspath(
-        r"C:\Users\Admin\Documents\Cultural Analytics\resources\political_faces_treemap_3000001.html")
+        "save_the_graph_here")
     print(f"\nSaving to: {output_path}")
     fig.write_html(output_path)
 
