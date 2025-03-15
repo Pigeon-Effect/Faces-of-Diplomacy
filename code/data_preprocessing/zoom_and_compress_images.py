@@ -1,22 +1,15 @@
 import os
 import face_recognition_models
 
-# --- Fix: Manually set the model directory ---
 models_path = os.path.join(os.path.dirname(face_recognition_models.__file__), 'models')
 face_recognition_models.model_dir = models_path
 
-# Now import face_recognition AFTER setting the model directory
 import face_recognition
 from PIL import Image
 
 
 def process_images(input_root, output_root, crop_margin=0.25, target_size=(300, 300)):
-    """
-    Process images while maintaining folder structure:
-    - Creates mirrored folder structure in output root
-    - Only keeps images with exactly one face
-    - Crops to face with margin and resizes
-    """
+
     for root, dirs, files in os.walk(input_root):
         for file in files:
             if file.lower().endswith(('.jpg', '.png')):
@@ -61,8 +54,8 @@ def process_images(input_root, output_root, crop_margin=0.25, target_size=(300, 
 
 
 # Path configuration
-input_root = r"C:\Users\Admin\Documents\Cultural Analytics\resources\wikimedia\missing_leader_dataset"
-output_root = r"C:\Users\Admin\Documents\Cultural Analytics\resources\wikimedia\missing_leader_dataset_compressed"
+input_root = "path_to_input_images"
+output_root = "path_to_output_images"
 
 # Start processing
 process_images(input_root, output_root)
