@@ -2,8 +2,8 @@ import pandas as pd
 from scipy.stats import pearsonr, kendalltau
 
 # Read data
-emotion_df = pd.read_csv(r'C:\Users\Admin\Documents\Cultural Analytics\code\facial_expression_recognition\country_emotion_results_only_20_and_more.csv')
-order_df = pd.read_csv(r'C:\Users\Admin\Documents\Cultural Analytics\code\facial_expression_recognition\country_order.csv', header=None, names=['iso'])
+emotion_df = pd.read_csv("country_emotion_results_only_20_and_more.csv")
+order_df = pd.read_csv("heatmap_country_order", header=None, names=['iso'])
 
 # Add ranking (1 = highest rank)
 order_df['rank'] = range(1, len(order_df) + 1)
