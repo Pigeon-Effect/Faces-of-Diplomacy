@@ -77,9 +77,9 @@ for idx, (y_pos, iso_code) in enumerate(zip(y_centers, heatmap_data.index)):
         arrowprops=dict(arrowstyle="-", color='black', lw=0.5)
     )
 
-ax.tick_params(axis='x', which='both', bottom=False, top=True, labeltop=True, labelbottom=False)  # Move labels to top
-plt.xticks(rotation=45, fontsize=10, ha='left')  # Change alignment to left after rotation
-plt.subplots_adjust(left=0.25, right=0.93, top=0.95, bottom=0.1)  # Increased right margin space
+ax.tick_params(axis='x', which='both', bottom=False, top=True, labeltop=True, labelbottom=False)
+plt.xticks(rotation=45, fontsize=10, ha='left')
+plt.subplots_adjust(left=0.25, right=0.93, top=0.95, bottom=0.1)
 plt.tight_layout()
 
 output_file = "save_graph_here"
