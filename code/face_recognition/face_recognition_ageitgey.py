@@ -6,7 +6,6 @@ from sklearn.preprocessing import LabelEncoder
 import face_recognition
 import face_recognition_models
 
-# --- Fix: Set model directory for face recognition ---
 models_path = os.path.join(os.path.dirname(face_recognition_models.__file__), 'models')
 face_recognition_models.model_dir = models_path
 
@@ -17,7 +16,6 @@ def train_face_recognition_model(dataset_path, model_save_path):
 
     print("Starting dataset scan...")
 
-    # Walk through directory structure
     for country_code in os.listdir(dataset_path):
         country_path = os.path.join(dataset_path, country_code)
 
@@ -83,8 +81,8 @@ def train_face_recognition_model(dataset_path, model_save_path):
 
 
 # Configuration
-dataset_path = r"C:\Users\Admin\Documents\Cultural Analytics\resources\wikimedia\filtered_cropped_augmented_100"
-model_save_path = r"C:\Users\Admin\Documents\Cultural Analytics\models\politician_classifier.pkl"
+dataset_path = "path_to_china_daily_dataset"
+model_save_path = "politician_classifier.pkl"
 
 # Start training
 train_face_recognition_model(dataset_path, model_save_path)
