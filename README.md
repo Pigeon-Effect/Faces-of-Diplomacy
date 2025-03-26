@@ -14,7 +14,7 @@ Distribution of Recognized De-Facto Leaders by Country and Continent
 ![Treemap](https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/treemap.svg)
 
 
-
+Prevalence of Emotions of De Facto-Leaders Depictions by Country
 ![Emotion Prevalence Heatmap](https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/emotion_prevalence_heatmap_all_countries.svg)
 
 
