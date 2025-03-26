@@ -11,8 +11,12 @@ Statistical Analysis: Correlation between leader sentiment and UN voting alignme
 Results:
 
 Distribution of Recognized De-Facto Leaders by Country and Continent
-
 ![Treemap](https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/treemap.svg)
+
+
+
+![Emotion Prevalence Heatmap](https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/emotion_prevalence_heatmap_all_countries.svg)
+
 
 
 Results indicate patterns in emotional representation based on geopolitical alignment.
