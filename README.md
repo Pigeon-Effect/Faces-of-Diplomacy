@@ -8,4 +8,11 @@ Image Processing: Face cropping, normalization, and augmentation.
 Sentiment Analysis: Applying ViT-based facial expression recognition to classify emotions (anger, disgust, fear, happiness, neutrality, sadness, surprise).
 Statistical Analysis: Correlation between leader sentiment and UN voting alignment with China.
 
+Results:
+
+Distribution of Recognized De-Facto Leaders by Country and Continent
+
+![Treemap](https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/treemap.svg)
+
+
 Results indicate patterns in emotional representation based on geopolitical alignment.
