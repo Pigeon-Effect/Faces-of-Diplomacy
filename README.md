@@ -15,12 +15,17 @@ Distribution of Recognized De-Facto Leaders by Country and Continent
 
 
 
-Prevalence of Emotions of De Facto-Leaders Depictions by Country
+Prevalence of Emotions of De Facto-Leaders Depictions by Country (sorted by Voting Coincidence in the UNGA from 2020 to 2025.
 <img src="https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/emotion_prevalence_heatmap_all_countries.svg" style="width:100%; height:auto;">
 
 
 
 Results indicate patterns in emotional representation based on geopolitical alignment.
+Neutrality shows the strongest and most robust negative correlation — leaders from countries aligned with China are shown more neutrally
+Anger shows a moderate positive correlation, especially among China's rivals
+Happiness is not significantly associated with alignment
+"Negative emotions" (Anger, Fear, Disgust, Surprise) are more common among leaders from adversarial countries
+
 
 <table>
   <thead>
