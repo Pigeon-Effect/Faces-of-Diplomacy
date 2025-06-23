@@ -1,31 +1,44 @@
-Faces of Diplomacy: Visual Framing of Global Leaders in the China Daily (2020–2025)
+# Faces of Diplomacy: Visual Framing of Global Leaders in the *China Daily* (2020–2025)
 
-This repository contains the code and data for analyzing the emotional portrayal of world leaders in China Daily images from 2020 to 2025. The pipeline includes:
+This repository contains the code and data for analyzing the **emotional portrayal of world leaders** in images published by the state-run newspaper *China Daily* from 2020 to 2025. The analysis combines computer vision, facial recognition, and statistical methods to explore visual media bias in international political communication.
 
-Data Collection: Automated scraping of China Daily images via Selenium and query-based searches.
-Face Recognition: Training an SVM classifier on Wikimedia images to identify 225 de facto leaders.
-Image Processing: Face cropping, normalization, and augmentation.
-Sentiment Analysis: Applying ViT-based facial expression recognition to classify emotions (anger, disgust, fear, happiness, neutrality, sadness, surprise).
-Statistical Analysis: Correlation between leader sentiment and UN voting alignment with China.
+---
 
-Results:
+## Pipeline Overview
 
-Distribution of Recognized De-Facto Leaders by Country and Continent
+- **Data Collection**: Automated scraping of *China Daily* via Selenium and keyword-based queries.
+- **Face Recognition**: Training an SVM classifier using 22,607 Wikimedia images of 225 *de facto* global leaders.
+- **Image Processing**: Cropping, normalization, and augmentation of facial images.
+- **Emotion Classification**: Applying a ViT-based model to detect 7 facial expressions:  
+  *Anger, Disgust, Fear, Happiness, Neutrality, Sadness, Surprise*
+
+---
+
+## Distribution of Leader Depictions  
+*Number of recognized appearances by country and continent:*
+
 <img src="https://github.com/Pigeon-Effect/Faces-of-Diplomacy/blob/main/results/treemap.svg?raw=true" style="width:100%; height:auto;">
 
+---
 
+## Emotional Portrayals and Geopolitical Alignment  
+*Emotion prevalence by country, sorted by UNGA voting coincidence with China (2020–2025):*
 
-Prevalence of Emotions of De Facto-Leaders Depictions by Country (sorted by Voting Coincidence in the UNGA from 2020 to 2025.
 <img src="https://raw.githubusercontent.com/Pigeon-Effect/Faces-of-Diplomacy/refs/heads/main/results/emotion_prevalence_heatmap_all_countries.svg" style="width:100%; height:auto;">
 
+---
 
+## Results Summary
 
-Results indicate patterns in emotional representation based on geopolitical alignment.
-Neutrality shows the strongest and most robust negative correlation — leaders from countries aligned with China are shown more neutrally
-Anger shows a moderate positive correlation, especially among China's rivals
-Happiness is not significantly associated with alignment
-"Negative emotions" (Anger, Fear, Disgust, Surprise) are more common among leaders from adversarial countries
+- From **5,202 verified images**, **Xi Jinping alone appears in 1,926** — nearly **37%** of all depictions.
+- **Neutrality** and **Happiness** dominate facial expressions across countries.
+- **Negative emotions** (*Anger, Fear, Disgust, Surprise*) are more common among leaders from countries **less aligned** with China.
+- **Neutrality** is strongly associated with **Chinese allies**, suggesting a diplomatic framing of composure.
+- Outlier emotions (e.g., Anger in Cyprus, Surprise in Slovenia) are largely driven by **single-image distortions**.
 
+---
+
+## Correlation with Political Alignment
 
 <table>
   <thead>
@@ -51,3 +64,13 @@ Happiness is not significantly associated with alignment
 ** p &lt; 0.05<br>
 * p &lt; 0.10</p>
 
+---
+
+## Interpretation
+
+- **Neutrality** is the most reliable indicator of alignment: *China Daily* portrays allied leaders with more emotional restraint.
+- **Anger** shows a modest positive correlation with diplomatic opposition to China.
+- Contrary to prior assumptions, **Happiness** is not significantly associated with alignment.
+- Rather than a simple positive–negative dichotomy, the results point to a **spectrum of emotional expressiveness**, with allies framed as composed and adversaries as emotionally charged.
+
+---
